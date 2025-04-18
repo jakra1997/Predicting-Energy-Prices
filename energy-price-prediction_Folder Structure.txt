@@ -1,0 +1,23 @@
+energy-price-prediction/
+│
+├── data/                    ← Raw and preprocessed data
+│   ├── raw/                 ← Original CSVs (as you have them now)
+│   └── processed/           ← Cleaned, merged datasets
+│
+├── notebooks/               ← Jupyter notebooks for EDA, training, testing
+│   ├── 01_data_merge.ipynb  ← Where you’ll merge and align your data
+│   ├── 02_eda.ipynb         ← Visuals, correlations, etc.
+│   └── 03_model_baseline.ipynb ← First model(s)
+│
+├── src/                     ← Python scripts (for later packaging)
+│   ├── data_processing.py   ← Data cleaning + merging logic
+│   ├── model.py             ← Training and evaluation logic
+│   └── fusion.py            ← Late fusion logic (optional)
+│
+├── app/                     ← For the web API or Streamlit app (later)
+│   └── main.py
+│
+├── Dockerfile               ← For deployment (required by project)
+├── requirements.txt         ← List of pip dependencies
+├── README.md                ← Project summary, how to run, etc.
+└── .gitignore               ← Ignore checkpoints, pycache, etc.
