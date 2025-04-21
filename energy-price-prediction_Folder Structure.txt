@@ -1,23 +1,146 @@
-energy-price-prediction/
+C:.
+│   Dockerfile
+│   energy-price-prediction_Folder Structure.txt
+│   main.py
+│   Predicting Energy Prices Using a Multimodal Machine Learning.pptx
+│   Requirements.txt
+│   Results.xlsx
 │
-├── data/                    ← Raw and preprocessed data
-│   ├── raw/                 ← Original CSVs (as you have them now)
-│   └── processed/           ← Cleaned, merged datasets
+├───data
+│   ├───for ChatGPT processing
+│   │       daily.csv
+│   │       Germany.csv
+│   │       News_Category_Dataset_v3.json
+│   │       RBRTEd.csv
+│   │       time_series_60min_singleindex_filtered.csv
+│   │       weather_data_filtered.csv
+│   │       wp_hl.csv
+│   │       wsj_hl.csv
+│   │
+│   ├───processed
+│   │       cleaned_oil_prices.csv
+│   │       filtered_energy_news.csv
+│   │       filtered_energy_news_with_sentiment.csv
+│   │       filtered_energy_news_with_sentiment_numeric.csv
+│   │       final_energy_price_forecast_2020_week1.csv
+│   │       final_sentiment_filtered_news.csv
+│   │       forecasted_all_features_with_ratios_last_week_2019.csv
+│   │       merged_energy_data.csv
+│   │       merged_energy_data_final_step_1.csv
+│   │       multioutput_forecast_shap_features_fast.csv
+│   │
+│   └───raw
+│           daily.csv
+│           Germany.csv
+│           News_Category_Dataset_v3.json
+│           RBRTEd.csv
+│           time_series_60min_singleindex_filtered.csv
+│           weather_data_filtered.csv
+│           wp_hl.csv
+│           wsj_hl.csv
 │
-├── notebooks/               ← Jupyter notebooks for EDA, training, testing
-│   ├── 01_data_merge.ipynb  ← Where you’ll merge and align your data
-│   ├── 02_eda.ipynb         ← Visuals, correlations, etc.
-│   └── 03_model_baseline.ipynb ← First model(s)
+├───docs
+│   └───conversations
+│       │   AI-Powered Data Innovator.html
+│       │   AI-Powered Data Innovator_Day2.html
+│       │   AI-Powered Data Innovator_Day3.html
+│       │   data_merge_session.md
+│       │   forecasting_experiments_summary.md
+│       │   sunday_summary.md
+│       │   xgboost_recursive_forecasting_summary.md
+│       │
+│       ├───AI-Powered Data Innovator_Day2_files
+│       │       ADAVisualizationComponent-b5feuqnm.css
+│       │       conversation-small-hkgg670s.css
+│       │       favicons
+│       │       favicons(1)
+│       │       favicons(2)
+│       │       favicons(3)
+│       │       favicons(4)
+│       │       favicons(5)
+│       │       root-ooa0e0k5.css
+│       │
+│       ├───AI-Powered Data Innovator_Day3_files
+│       │       ADAVisualizationComponent-b5feuqnm.css
+│       │       conversation-small-hkgg670s.css
+│       │       favicons
+│       │       favicons(1)
+│       │       favicons(2)
+│       │       favicons(3)
+│       │       favicons(4)
+│       │       favicons(5)
+│       │       root-ooa0e0k5.css
+│       │       saved_resource.html
+│       │
+│       └───AI-Powered Data Innovator_files
+│               ADAVisualizationComponent-b5feuqnm.css
+│               conversation-small-hkgg670s.css
+│               favicons
+│               favicons(1)
+│               favicons(2)
+│               favicons(3)
+│               favicons(4)
+│               favicons(5)
+│               root-k4whafiw.css
 │
-├── src/                     ← Python scripts (for later packaging)
-│   ├── data_processing.py   ← Data cleaning + merging logic
-│   ├── model.py             ← Training and evaluation logic
-│   └── fusion.py            ← Late fusion logic (optional)
+├───draft_notebooks
+│   │   01_data_merge.ipynb
+│   │   02_EDA.ipynb
+│   │   03b_price_model_shap_analysis.ipynb
+│   │   03c_price_model_shap_filtered_features.ipynb
+│   │   03i_baseline_model.ipynb
+│   │   03_baseline_model.ipynb
+│   │   04_forecasting_model.ipynb
+│   │   05_feature_forecasting.ipynb
+│   │   06_hybrid_solar_forecast.ipynb
+│   │   06_recursive_feature_forecast.ipynb
+│   │   07_weekly_forecast_pipeline.ipynb
+│   │   08_direct_multioutput_forecast.ipynb
+│   │   09a_download_gdelt_energy_events_2017_H2.ipynb
+│   │   09_collecting_news_online.ipynb
+│   │   10b_forecast_features_last_week_2019.ipynb
+│   │   10c_forecast_all_features_with_ratios_last_week_2019.ipynb
+│   │   10d_multioutput_forecast_all_features_last_week_2019.ipynb
+│   │   10e_fast_multioutput_forecast_shap_features.ipynb
+│   │   10_recursive_feature_forecast_to_price_prediction.ipynb
+│   │   11i_Multimodal Model.ipynb
+│   │   11_Multimodal Model.ipynb
+│   │   energy_news_articles.csv
+│   │   report.html
+│   │
+│   ├───gdelt_energy_events
+│   └───gdelt_energy_news
+├───saved_models
+│       M168h.pkl
+│       M24h.pkl
+│       M336h.pkl
+│       M48h.pkl
+│       M672h.pkl
+│       M72h.pkl
+│       U168h.pkl
+│       U24h.pkl
+│       U336h.pkl
+│       U48h.pkl
+│       U672h.pkl
+│       U72h.pkl
 │
-├── app/                     ← For the web API or Streamlit app (later)
-│   └── main.py
-│
-├── Dockerfile               ← For deployment (required by project)
-├── requirements.txt         ← List of pip dependencies
-├── README.md                ← Project summary, how to run, etc.
-└── .gitignore               ← Ignore checkpoints, pycache, etc.
+└───submission_notebooks
+        01_data_merge.ipynb
+        02_EDA.ipynb
+        03_baseline_model.ipynb
+        03_baseline_model_168h.ipynb
+        03_baseline_model_24h.ipynb
+        03_baseline_model_336h.ipynb
+        03_baseline_model_48h.ipynb
+        03_baseline_model_672h.ipynb
+        03_baseline_model_72h.ipynb
+        09b_news_eda_filtering.ipynb
+        09c_bert_sentiment_analysis_torch.ipynb
+        09d_sentiment_EDA_energy_prices.ipynb
+        11_Multimodal Model_168h.ipynb
+        11_Multimodal Model_24h.ipynb
+        11_Multimodal Model_336h.ipynb
+        11_Multimodal Model_48h.ipynb
+        11_Multimodal Model_672h.ipynb
+        11_Multimodal Model_72h.ipynb
+        report.html

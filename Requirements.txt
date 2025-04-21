@@ -1,0 +1,22 @@
+# Core libraries
+pandas
+numpy
+scikit-learn
+xgboost
+matplotlib
+seaborn
+
+# NLP / Sentiment Analysis
+transformers
+torch
+sentencepiece  # Required by some transformer models
+
+# Web API
+fastapi
+uvicorn
+
+# For saving/loading models
+joblib
+
+# Optional but useful
+tqdm
