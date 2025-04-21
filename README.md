@@ -80,6 +80,9 @@ We explored:
 - **Sentiment-category interactions**
 - **Total energy cost estimation:**
   - `Cost = Predicted Price × Load`
+## Results
+
+![image](https://github.com/user-attachments/assets/6d6f5d95-10b0-462d-a25e-d84a57aa45d5)
 
 ---
 
