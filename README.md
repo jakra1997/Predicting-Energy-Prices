@@ -1,6 +1,8 @@
 # ⚡ Energy Price Forecasting with Multimodal AI
 
-This project aims to forecast hourly energy prices using machine learning models that combine **structured time series data** (such as solar/wind/load/gas/oil) with **unstructured sentiment signals** extracted from energy-related news.
+This project aims to forecast hourly energy prices using machine learning models that combine **structured time series data** (such as solar/wind/load/gas/oil) with **unstructured sentiment signals** extracted from energy-related news. </br>
+
+Done by: Jad Akra "jaa65@mail.aub.edu" for EECE690 - Intro to Machine Learning @ American University of Beirut
 
 ---
 
