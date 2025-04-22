@@ -16,6 +16,11 @@ Accurate energy price forecasting is vital for traders, operators, and policy ma
 - Public sentiment and geopolitical news
 
 ---
+## User Interface
+To access the user interface, write: </br>
+python -m streamlit run app.py </br>
+
+---
 
 ## 📁 Dataset Overview
 Data can be found under the folder: </br>
