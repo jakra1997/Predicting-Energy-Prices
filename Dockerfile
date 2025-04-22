@@ -1,18 +1,23 @@
-# Use an official Python image
+# Base image
 FROM python:3.11-slim
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy requirements and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy requirements first for dependency caching
+COPY Requirements.txt .
 
-# Copy the rest of your project files
+# Install xgboost first (separately because it's large)
+RUN pip install --no-cache-dir --default-timeout=100 --retries=5 xgboost
+
+# Then install the rest of the dependencies
+RUN pip install --no-cache-dir --default-timeout=100 --retries=5 -r Requirements.txt
+
+# Copy the rest of your project
 COPY . .
 
-# Expose port that FastAPI will run on
+# Expose API port
 EXPOSE 8000
 
-# Start FastAPI app with uvicorn
+# Run the app
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
