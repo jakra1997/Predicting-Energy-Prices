@@ -19,7 +19,9 @@ Accurate energy price forecasting is vital for traders, operators, and policy ma
 
 ## 📁 Dataset Overview
 Data can be found under the folder: </br>
-/data/raw
+/data/raw </br>
+or </br>
+https://drive.google.com/drive/folders/177Za4MCs7PLsISKVG6Aa4DdxCxxd3wKB?usp=sharing
 
 ## Credits
 time_series_60min_singleindex_filtered.csv "https://data.open-power-system-data.org/time_series/2020-10-06" </br>
