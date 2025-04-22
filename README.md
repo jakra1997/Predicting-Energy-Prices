@@ -16,6 +16,11 @@ Accurate energy price forecasting is vital for traders, operators, and policy ma
 - Public sentiment and geopolitical news
 
 ---
+## User Interface
+To access the user interface, write: </br>
+python -m streamlit run app.py </br>
+
+---
 
 ## 📁 Dataset Overview
 Data can be found under the folder: </br>
@@ -61,10 +66,6 @@ News Headlines
 - Model: `XGBoostRegressor`
 - Features: Time lags, calendar signals, ratios (wind/load)
 - Training on raw price data
-- Baseline performance:  
-  - 24h MAE ≈ 6.07  
-  - 168h MAE ≈ 6.33  
-  - 336h MAE ≈ 6.64  
 
 ### Multimodal Approach:
 - Early-stage fusion of structured data + sentiment features
@@ -82,6 +83,47 @@ We explored:
 - **Sentiment-category interactions**
 - **Total energy cost estimation:**
   - `Cost = Predicted Price × Load`
+
+ ## Files
+
+    01_data_merge.ipynb
+      merges numeric data into one csv file
+│   02_EDA.ipynb
+      performs EDA on the numeric data
+│   03_baseline_model.ipynb
+      baseline model to predict the energy price
+│   03_baseline_model_168h.ipynb
+      baseline model to predict the energy price for 1 week      
+│   03_baseline_model_24h.ipynb
+      baseline model to predict the energy price for 1 day  
+│   03_baseline_model_336h.ipynb
+      baseline model to predict the energy price for 2 weeks  
+│   03_baseline_model_48h.ipynb
+      baseline model to predict the energy price for 2 days  
+│   03_baseline_model_672h.ipynb
+      baseline model to predict the energy price for 1 month  
+│   03_baseline_model_72h.ipynb
+      baseline model to predict the energy price for 3 days  
+│   09b_news_eda_filtering.ipynb
+      filters news headlines and performs EDA
+│   09c_bert_sentiment_analysis_torch.ipynb
+      performs sentiment analysis on the headlines and turns it into numeric data
+│   09d_sentiment_EDA_energy_prices.ipynb
+      performs EDA on the numeric data
+│   11_Multimodal Model_168h.ipynb
+      baseline model to predict the energy price for 1 week  
+│   11_Multimodal Model_24h.ipynb
+      baseline model to predict the energy price for 1 day  
+│   11_Multimodal Model_336h.ipynb
+      baseline model to predict the energy price for 2 weeks  
+│   11_Multimodal Model_48h.ipynb
+      baseline model to predict the energy price for 2 days  
+│   11_Multimodal Model_672h.ipynb
+      baseline model to predict the energy price for 1 month  
+│   11_Multimodal Model_72h.ipynb
+      baseline model to predict the energy price for 3 days  
+
+
 ## Results
 
 ![image](https://github.com/user-attachments/assets/6d6f5d95-10b0-462d-a25e-d84a57aa45d5)
@@ -90,7 +132,12 @@ We explored:
 
 ## 🚀 Deployment
 
-### 🐳 Docker + FastAPI
+### User Interface
+To access the user interface, write: </br>
+python -m streamlit run app.py </br> 
+
+
+### 🐳 Docker + FastAPI (does not work)
 
 Run a RESTful API to serve predictions:
 
